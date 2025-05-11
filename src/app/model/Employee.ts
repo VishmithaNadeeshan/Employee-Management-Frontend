@@ -2,10 +2,10 @@ export class Employee{
   id?: number;
   name: string;
   email: string;
-  departmentType: Enumerator;
+  departmentType: String;
 
 
-  constructor(name: string, email: string,departmentType: Enumerator, id?: number) {
+  constructor(name: string, email: string,departmentType: String, id?: number) {
     this.id = id;
     this.name = name;
     this.email = email;
