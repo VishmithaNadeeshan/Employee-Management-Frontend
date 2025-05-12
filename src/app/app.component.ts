@@ -1,15 +1,19 @@
 import { Component } from '@angular/core';
+import { HeaderComponent } from './common/header/header.component';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from "./common/header/header.component";
-import { HomeComponent } from "./pages/home/home.component";
-
+;
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, HomeComponent],
+  standalone: true,
+  imports: [RouterOutlet, HeaderComponent], // Only if <app-home> is in HTML
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'practice-1';
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
 }
+
+

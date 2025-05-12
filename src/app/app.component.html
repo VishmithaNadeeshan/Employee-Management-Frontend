@@ -1,6 +1,5 @@
 <app-header></app-header>
-<div class="container">
-  <div class="table">
-    <app-home></app-home>
-  </div>
-</div>
+<app-home></app-home> <!-- ✅ Correctly closed tag -->
+<!-- or use <router-outlet></router-outlet> if routing -->
+
+<router-outlet></router-outlet>

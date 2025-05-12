@@ -19,7 +19,7 @@ export class EmployeeService {
     return this.http.get<Employee>(`${`http://localhost:8080/employee/searchById`}/${id}`);
   }
 
-  create(employee: Employee): Observable<Employee> {
+  add(employee: Employee): Observable<Employee> {
     return this.http.post<Employee>(`http://localhost:8080/employee/add`, employee);
   }
 

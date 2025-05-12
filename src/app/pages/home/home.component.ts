@@ -64,5 +64,20 @@ export class HomeComponent implements OnInit {
     this.employeeList = employees;
   });
 }
+addEmployee(): void {
+  if (this.isEditMode && this.selectedEmployeeId !== null) {
+    // Update mode
+    this.employeeService.update(this.selectedEmployeeId, this.employee).subscribe(() => {
+      this.loadCustomersTable();
+      this.resetForm();
+    });
+  } else {
+    // Add mode
+    this.employeeService.add(this.employee).subscribe(() => {
+      this.loadCustomersTable();
+      this.resetForm();
+    });
+  }
+}
 
 }
